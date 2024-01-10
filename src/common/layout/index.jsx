@@ -7,9 +7,9 @@ const Layout = ({children}) => {
   return (
     <div>
         <Header />
-        <div className='flex'>
+        <div className='flex mt-[108px]'>
             <Sidepanal />
-            <div className='w-[80%] mob:w-full'>
+            <div className='w-[80%]  mob:w-full'>
                 {children}
             </div>
         </div>
