@@ -1,6 +1,6 @@
 import {  CameraAlt } from '@mui/icons-material';
 import { Avatar } from '@mui/material';
-import React, { useEffect, useState } from 'react'
+import React, {  useState } from 'react'
 import { useForm } from 'react-hook-form'
 import PhoneInput from 'react-phone-input-2';
 
@@ -11,19 +11,13 @@ const BuisnessDetails = () => {
     register,
     getValues,
     handleSubmit,
-    
-    control,
-    formState: { errors },
   } = useForm();
-  const [values, setValues] = useState()
-  useEffect(()=> {
-    console.log(values)
-  },[values])
+
   const onSubmit = (data) => console.log(data)
   return (
     <div className='w-full'>
-         <form className='flex w-full px-10 py-6 gap-4' onSubmit={handleSubmit(onSubmit)}>
-            <div className='flex flex-col w-1/2 gap-4'>
+         <form className='flex mob:flex-col-reverse w-full px-10 py-6 gap-4' onSubmit={handleSubmit(onSubmit)}>
+            <div className='flex flex-col mob:w-full w-1/2 gap-4'>
             <input placeholder='Buisness Name' className='common-input'  {...register("buisnessname")}/>
             <textarea placeholder='Description' className='common-textarea' rows={3} {...register("description")}/>
             <select className='common-select' {...register("category")} placeholder="Category">
@@ -33,7 +27,7 @@ const BuisnessDetails = () => {
               <option>category1</option>
             </select>
             <PhoneInput 
-              inputClass='left-[29px] !w-[95%] common-input'
+              inputClass='left-[29px] mob:!w-[90%] !w-[95%] common-input'
               dropdownClass='!border-2'
               country={'us'}
               value={phone}
@@ -42,11 +36,11 @@ const BuisnessDetails = () => {
             <input placeholder='Email address' className='common-input'  {...register("email-address")}/>
             <input placeholder='Buisness web site' className='common-input'  {...register("website-address")}/>
             </div>
-            <div className='w-1/2 flex flex-col gap-[30px] items-center justify-center'>
+            <div className='w-1/2 flex flex-col  mob:w-full gap-[30px] items-center justify-center'>
                 <div>
-                    {console.log(getValues())}
+                   
                   <Avatar 
-                    className='!w-[200px] !border-2 !border-primary !h-[200px]'
+                    className='!w-[200px] mob:!w-[100px] mob:!h-[100px] !border-2 !border-primary !h-[200px]'
                     src={  getValues()?.profileImage && getValues()?.profileImage[0] ? URL.createObjectURL(getValues()?.profileImage[0]) : ""}
                   />
                 </div>
