@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 
 const Header = () => {
   return (
-    <div className='bg-secondary fixed top-0  gap-3 flex w-full py-6 px-6 '>
+    <div className='bg-secondary z-50 fixed top-0  gap-3 flex w-full py-6 px-6 '>
         <Image
             src={"/assets/images/mainlogo.jpg"}
             alt="mainlogo"
@@ -18,7 +18,7 @@ const Header = () => {
             <Text className="text-primary font-semibold text-[24px] mob:text-[10px]">Administration Portal</Text>
         </div>
         <div className='ml-auto flex items-end gap-9'>
-        <div className='flex flex-row mob:items-center items-end  mob:flex-col-reverse '>
+        <div className='flex flex-row gap-[10px] mob:gap-0 mob:items-center items-end  mob:flex-col-reverse '>
 
         <div className=' mob:text-[14px]'>
             <Link to={"#"}>
