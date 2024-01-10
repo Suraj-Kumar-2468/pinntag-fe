@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 
 const Header = () => {
   return (
-    <div className='bg-secondary   gap-3 flex w-full py-6 px-6 '>
+    <div className='bg-secondary fixed top-0  gap-3 flex w-full py-6 px-6 '>
         <Image
             src={"/assets/images/mainlogo.jpg"}
             alt="mainlogo"
