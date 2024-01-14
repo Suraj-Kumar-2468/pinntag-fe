@@ -14,7 +14,6 @@ const App = () => {
   return (
     <div>
       <Routes>
-
               {
                 routeslist.map(({path, Element}) => {
                     return  <Route  path={path} element={  <Suspense fallback={<div>Loading...</div>}>

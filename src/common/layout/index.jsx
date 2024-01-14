@@ -9,7 +9,7 @@ const Layout = ({children}) => {
         <Header />
         <div className='flex mt-[143px] mob:mt-[108px]'>
             <Sidepanal />
-            <div className='w-[80%]  mob:w-full'>
+            <div className='w-[80%] mob:w-full ml-auto'>
                 {children}
             </div>
         </div>

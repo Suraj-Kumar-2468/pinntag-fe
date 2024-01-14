@@ -8,9 +8,9 @@ const Sidepanal = () => {
     const location = useLocation()
     const [isPanalOpen, setIsPanalOpen] = useState(false)
     return (<>
-        <div className={classNames(isPanalOpen ? "mob:w-full mob:h-full" : "mob:w-0 mob:px-0",'flex z-100 transition-[width] duration-500 ease-in-out   mob:fixed  mob:z-40  flex-col gap-[20px] h-[calc(100vh-144px)] mob:left-0 mob:h-[calc(100vh-134px)] p-5 w-1/5 bg-primary')}>
-            <div className='w-full flex items-end justify-end'>
-            <CloseRounded onClick={()=>setIsPanalOpen(false)} className='stroke-[3px]'  />
+        <div className={classNames(isPanalOpen ? "mob:w-full mob:h-full" : "mob:w-0 mob:px-0",'flex z-100 fixed transition-[width] duration-500 ease-in-out   mob:fixed  mob:z-40  flex-col gap-[20px] h-[calc(100vh-144px)] mob:left-0 mob:h-[calc(100vh-134px)] p-5 w-1/5 bg-primary')}>
+            <div className='flex items-end justify-end w-full'>
+            <CloseRounded onClick={()=>setIsPanalOpen(false)} className='stroke-[3px] md:!hidden'  />
             </div>
             
             {
